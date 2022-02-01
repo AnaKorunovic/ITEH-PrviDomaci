@@ -6,7 +6,7 @@
     if(!isset($id) || !intval($id)){
        header('Location: ../../update.php&id='.$id.'&greska=Los ID');
     }else{
-        $broker->udc('delete from kafa where id='.$id);
+        $broker->izvrsiUpit('delete from kafa where id='.$id);
         header('Location: ../../index.php');
     }
     
