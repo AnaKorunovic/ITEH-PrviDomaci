@@ -37,7 +37,7 @@ class Broker{
 
 
 
-    public function udc($upit){    
+    public function izvrsiUpit($upit){    
         $rezultat=$this->mysqli->query($upit);
         $response=[];
         $response['status']=(!$rezultat)?false:true;
