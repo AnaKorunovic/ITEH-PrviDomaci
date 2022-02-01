@@ -27,7 +27,7 @@ CREATE TABLE `kafa` (
   `ukus` varchar(40) DEFAULT 'NULL',
   `opis` varchar(40) DEFAULT 'NULL',
   `marka_id` bigint(20) DEFAULT NULL,
-  `slika` text DEFAULT 'NULL',
+  `slika` varchar(100) DEFAULT '''NULL''',
   PRIMARY KEY (`id`),
   KEY `marka_id` (`marka_id`),
   CONSTRAINT `kafa_ibfk_1` FOREIGN KEY (`marka_id`) REFERENCES `marka` (`id`)
@@ -35,7 +35,7 @@ CREATE TABLE `kafa` (
 
 /*Data for the table `kafa` */
 
-insert  into `kafa`(`id`,`naziv`,`tezina`,`ukus`,`opis`,`marka_id`,`slika`) values (1,'Kafa GRAND Aroma',100,'obican','najfinija kafa sa tradicijom',6,'\'./img/GRAND.jpg\''),(2,'Kafa DONCAFE Green',180,'zeleni caj','kafa sa ukusom zelenog caja',5,'\'./img/DONCAFE.jpg\''),(3,'Kafa BARCAFEE Preminum',100,'obican','Premimu kafa vrhunskog kvaliteta',1,'\'./img/BARCAFEE.jpg\''),(4,'Kafa BONITO tamno przena',100,'pojacan','tamno przena kafa',2,'\'./img/BONITO.jpg\'');
+insert  into `kafa`(`id`,`naziv`,`tezina`,`ukus`,`opis`,`marka_id`,`slika`) values (1,'Kafa GRAND Aroma',100,'obican','najfinija kafa sa tradicijom',6,'img/GRAND.jpg'),(2,'Kafa DONCAFE Green',180,'zeleni caj','kafa sa ukusom zelenog caja',5,'img/DONCAFE.jpg'),(3,'Kafa BARCAFEE Preminum',100,'obican','Premimu kafa vrhunskog kvaliteta',1,'img/BARCAFEE.jpg\''),(4,'Kafa BONITO tamno przena',100,'pojacan','tamno przena kafa',2,'img/BONITO.jpg');
 
 /*Table structure for table `marka` */
 

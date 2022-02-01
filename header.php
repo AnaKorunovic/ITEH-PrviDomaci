@@ -1,25 +1,25 @@
-<nav className="navbar">
-        <div className="navbar-container">
-        <div className='navbar-logo' >
-          <Link to="/"><img src='img/logo.png' alt='kafa' /> </Link>
+<nav class="navbar">
+    <div class="navbar-container">
+        <div class='navbar-logo' >
+         <img src='img/logo.png' alt='kafa' />
         </div>   
          
           
-          <ul className=nav-menu>
-            <li className="nav-item">
-              <a href="index.php" className="nav-link">
+          <ul class=nav-menu>
+            <li class="nav-item">
+              <a href="index.php" class="nav-link">
                 Početna
-</a>
+            </a>
             </li>
-            <li className="nav-item">
-              <a href="dodajKafu.php" className="nav-link">
+            <li class="nav-item">
+              <a href="dodajKafu.php" class="nav-link">
                 Dodaj kafu
-</a>
+            </a>
             </li>
-            <li className="nav-item">
-              <a href="marke.php" className="nav-link">
+            <li class="nav-item">
+              <a href="marke.php" class="nav-link">
                 Dodaj marku
-</a>
+            </a>
             </li>
             
             
@@ -28,6 +28,6 @@
           
          
           
-        </div>
-      </nav>
+    </div>
+</nav>
   
