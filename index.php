@@ -41,8 +41,8 @@
                 </select>
             </div>
             <div class="col-6">
-                <input type="text" id='naziv' onkeyup="suggest(this.value)" class="form-control " placeholder="Filtriraj po nazivu">
-                <div id="livesearch"></div>
+                <input type="text" id='naziv' onkeyup="showHint(this.value)" class="form-control " placeholder="Filtriraj po nazivu">
+                <p> <span id="txtHint"></span> </p>
             </div>
         </div>
         <div id='elementi'>
@@ -131,21 +131,24 @@
             }
         }
 
-        //AUTOSUGES
-        $(document).ready(function () {
-          $("#naziv").keyup(function(){
-          var naziv = $("#naziv").val();
-          $.get("suggest.php", { unos: naziv },
-        function(data){
-            $("#livesearch").show();
-            $("#livesearch").html (data);
-   });
-});
-});
-function place(ele){
-	$("#naziv").val(ele.innerHTML);
-	$("#livesearch").hide();
-}
+        <!--AJAX funkcija-->
+	
+          function showHint(str) {
+          var xhttp;
+          if (str.length == 0) { 
+            document.getElementById("txtHint").innerHTML = "";
+            return;
+          }
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+          };
+          xhttp.open("GET", "ajaxSuggest.php?q="+str, true);
+          xhttp.send();   
+        }
+ 
 
 
 

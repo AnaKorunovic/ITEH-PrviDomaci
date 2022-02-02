@@ -48,7 +48,17 @@ class Broker{
         return $response;
     }
 
-
+    public function vratiNazivKafe(){
+        $data=null;
+        $upit="select naziv from kafa";
+        $rezultat=$this->mysqli->query($upit);   
+        if($rezultat){
+        while($row=mysqli_fetch_assoc($rezultat)){
+        $data[]=$row;
+        } 
+        }
+        return  $data;
+        }
 
 
 
