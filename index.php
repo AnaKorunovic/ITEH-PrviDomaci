@@ -41,7 +41,8 @@
                 </select>
             </div>
             <div class="col-6">
-                <input type="text" id='naziv' class="form-control " placeholder="Filtriraj po nazivu">
+                <input type="text" id='naziv' onkeyup="suggest(this.value)" class="form-control " placeholder="Filtriraj po nazivu">
+                <div id="livesearch"></div>
             </div>
         </div>
         <div id='elementi'>
@@ -129,6 +130,24 @@
                 ) 
             }
         }
+
+        //AUTOSUGES
+        $(document).ready(function () {
+          $("#naziv").keyup(function(){
+          var naziv = $("#naziv").val();
+          $.get("suggest.php", { unos: naziv },
+        function(data){
+            $("#livesearch").show();
+            $("#livesearch").html (data);
+   });
+});
+});
+function place(ele){
+	$("#naziv").val(ele.innerHTML);
+	$("#livesearch").hide();
+}
+
+
 
     </script>
     

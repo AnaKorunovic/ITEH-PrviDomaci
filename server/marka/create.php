@@ -5,7 +5,7 @@
    
     $naziv=$_POST['naziv'];
     
-    if(!preg_match('/^[a-zA-Z]*$/',$naziv)){
+    if(!preg_match('/^[a-zA-Z]*$/',$naziv)){//sadrzi samo velika i mala slova, bez razmaka
         header("Location: ../../marke.php?greska=Neispravan naziv");
     }else{
         $rezultat=$broker->izvrsiUpit("insert into marka(naziv) values ('".$naziv."') ");

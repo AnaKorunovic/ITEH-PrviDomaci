@@ -161,17 +161,14 @@ img {
   align-items: center;
 }
 
-/* CSS ya pretragu */
-
-.pretraga-krofni {
-  background-image: url("../krofne/slike/sprinklesjpg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+/*****************DODAJ KAFU*********************/
+.dodaj-kafu {
+  position: relative;
+  margin-left: 340px;
   padding: 7% 0;
 }
 
-.pretraga-krofni input[type="search"] {
+.dodaj-kafu input[type="search"] {
   width: 50%;
   padding: 1%;
   font-size: 1rem;

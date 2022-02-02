@@ -4,6 +4,7 @@ class Broker{
     private $mysqli;
     private static $broker;
   
+
        
     private function __construct(){
         $this->mysqli = new mysqli("localhost","ana","ana","Kafeterija");
@@ -41,7 +42,7 @@ class Broker{
         $rezultat=$this->mysqli->query($upit);
         $response=[];
         $response['status']=(!$rezultat)?false:true;
-        if(!$rezultat){
+        if(!$rezultat){//false
             $response['error']=$this->mysqli->error;
         }
         return $response;
