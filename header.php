@@ -1,7 +1,8 @@
+
 <nav class="navbar">
     <div class="navbar-container">
         <div class='navbar-logo' >
-         <img src='img/logo.png' alt='kafa' />
+         <img id="imglogo" src='img/logo.png' alt='kafa' />
         </div>   
          
           
@@ -21,12 +22,7 @@
                 Dodaj marku
             </a>
             </li>
-            
-            
-            
           </ul>
-          
-         
           
     </div>
 </nav>
