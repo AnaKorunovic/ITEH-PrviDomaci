@@ -73,30 +73,6 @@
 
 
 
-    <div class="container">
-<br>
-<br>
-<div class="thumbnail_div">
-<form method="post" action="get_thumbnail.php">
-    <p>Ako nemate ideju koju sliku da uzmete probajte neki thumbnail sa youtuba ili url neke fotografije !</p>
-<input  class="form-control" type="text" name="url" placeholder="Napisite URL youtube videa">
-<input class="form-control dugme-pretraga " type="submit" name="get_thumbnail" value="PREUZMITE SLIKU SA  YOUTUBE VIDEA">
-</form>
-
-
-<br>
-
-
-<div id="text_div">
- <form method="post" action="dajSliku.php">
-  <input  class="form-control" type="text" name="img_url" placeholder="Unesite URL slike">
-  <input  class="form-control dugme-pretraga "  type="submit" name="get_image" value="DODAJTE SLIKU U SVOJ RACUNAR">
- </form>
-</div>
-
-
-<br>
-</div>
 </div>
 
 

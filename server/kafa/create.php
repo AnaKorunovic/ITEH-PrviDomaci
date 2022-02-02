@@ -12,7 +12,7 @@ $marka_id=$_POST['marka_id'];
 $slika=$_FILES['slika'];
 $opis=$_POST['opis'];
 $nazivSlike=$slika['name'];
-$lokacija = "../../slike/".$nazivSlike;
+$lokacija = "../../img/".$nazivSlike;
 
 
 if(!move_uploaded_file($_FILES['slika']['tmp_name'],$lokacija)){
@@ -25,7 +25,7 @@ if(!move_uploaded_file($_FILES['slika']['tmp_name'],$lokacija)){
    
 }
 
-$rezultat=$broker->izvrsiUpit("insert into kafa(naziv, tezina, ukus, marka_id, opis, lokacija ) values ('".$naziv."',".$tezina.",'".$ukus."', ".$marka_id.",'".$opis."','".$lokacija."') ");
+$rezultat=$broker->izvrsiUpit("insert into kafa(naziv, tezina, ukus, marka_id, opis, slika ) values ('".$naziv."',".$tezina.",'".$ukus."', ".$marka_id.",'".$opis."','".$lokacija."') ");
 if($rezultat['status']){
     header("Location: ../../dodajKafu.php");
 }else{
