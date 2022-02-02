@@ -79,7 +79,22 @@
                 }
             })
         })
+
+
         function obrisi(marka_id) {
+  $.ajax({
+        url: './server/marka/delete.php',
+        method: 'post',
+        data: { id: marka_id },
+
+        success: function (data) {
+            window.location.reload();
+        }
+    })
+
+}
+/*
+function obrisi(marka_id) {
             $.post('./server/marka/delete.php', { id: marka_id }, function (data) {
                 if (data.status=='false') {
                     alert(data.error)
@@ -87,7 +102,10 @@
                     window.location.reload();
                 }
             })
-        }
+        }*/
+
+
+       
     </script>
 
 </body>
