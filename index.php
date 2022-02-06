@@ -124,7 +124,6 @@
                             <h4 class='text-center'>${kafa.naziv}</h4>
                             <h5 class='text-center'>${kafa.marka_id}</h5>  
                             
-                           <a href='./promena.php?id=${kafa.id}'> <button class='form-control btn-success mb-2 dugme-pretraga'>Vidi</button></a>
                         </div>
                     `
                 ) 
