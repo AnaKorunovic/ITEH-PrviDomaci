@@ -14,7 +14,7 @@
     ukus='".$ukus."' where id=".$id;
     
     if(!isset($id)){
-        header('Location: ../../update.php&id='.$id.'&greska=Nije prosledjen id');
+        header('Location: ../../index.php&id='.$id.'&greska=Nije prosledjen id');
         exit;
     }
    

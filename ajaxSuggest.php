@@ -17,12 +17,12 @@ $rows=$broker->vratiNazivKafe();
 
 
 
-// get the q parameter from URL
+// deo naziva se uzima iz URL-a
 $q = $_REQUEST["q"];
 
 $hint = "";
 
-// lookup all hints from array if $q is different from ""
+// trazi se hint iz niza
 if ($q !== "") {
     $q = strtolower($q);
     $len=strlen($q);
